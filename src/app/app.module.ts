@@ -5,14 +5,25 @@ import { AppComponent } from './app.component';
 import { ColorComponent } from './color/color.component';
 import { OrderComponent } from './order/order.component';
 
+// Those two are for the navigation
+import { HeaderComponent } from './header.component';
+import { routing } from './app-routing';
+
+// Bootstrap
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+
 @NgModule({
   declarations: [
     AppComponent,
     ColorComponent,
-    OrderComponent
+    OrderComponent,
+    HeaderComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    routing,
+    NgbModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
