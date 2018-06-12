@@ -8,7 +8,7 @@ import { Component } from "@angular/core";
         <nav class="col-md-8 col-offset-2">
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/color']">Color Palette</a>
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/palettes']">Color Palette</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" routerLinkActive="active" [routerLink]="['/order']">Make an Order</a>

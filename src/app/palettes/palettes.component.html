@@ -1,0 +1,19 @@
+<!-- 
+  4. braking down value of the property "palettes = Palette[]" to p 
+  pass single palette "p" to property "[palette]" that is defined in palette.component.ts
+  (so here, I am assignning a value coming from palettes to palette by Property Binding) 
+  (palettes.component.ts -> html -> palette.component.ts)
+  
+  (next: palette.component.ts)
+-->
+
+<h1>Color Palettes</h1>
+<div>
+  <ul>
+    <li class="mb-3" *ngFor="let p of palettes">
+      <app-palette [palette]="p"></app-palette>
+    </li>
+  </ul>
+</div>
+
+<add-palette></add-palette>

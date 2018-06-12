@@ -1,11 +1,11 @@
 import { Routes, RouterModule } from "@angular/router";
-import { ColorComponent } from "./color/color.component";
+import { PalettesComponent } from "./palettes/palettes.component";
 import { OrderComponent } from "./order/order.component";
 
 // type Routes is provided by ng
 const APP_ROUTES: Routes = [
-    {path: '', redirectTo: '/color', pathMatch: 'full'},
-    {path: 'color', component: ColorComponent},
+    {path: '', redirectTo: '/palettes', pathMatch: 'full'},
+    {path: 'palettes', component: PalettesComponent},
     {path: 'order', component: OrderComponent},
 ];
 

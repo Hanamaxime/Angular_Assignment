@@ -1,0 +1,14 @@
+<!-- 
+  6. now this html can access to property "palette" difined in palette.component.ts, 
+  which has data coming through 
+  palette.model->palette.servde->palettes.component.ts->palettes.components.html->palette.component 
+-->
+
+  Palette ID: {{ palette.id }}
+  <span *ngIf="palette.isFav==true">&#9733;</span>
+  <h2 class="h5">{{palette.paletteName}}</h2>
+  <div class="palette">
+    <div class="box-left" [ngStyle]="{backgroundColor:palette.colors[0]}"></div>
+    <div class="box-top" [ngStyle]="{backgroundColor:palette.colors[1]}"></div>
+    <div class="box-bottom" [ngStyle]="{backgroundColor:palette.colors[2]}"></div>  
+  </div>

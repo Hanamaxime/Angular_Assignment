@@ -1,0 +1,55 @@
+<div class="col-md-8 col-md-offset-2">
+  <!-- template driven approach (ng detect form element and create form object)  -->
+  <!-- ngModel tells ng to register this input field -->
+  <!-- 
+    To pass the form that is created by ang2 to onSubmit(),
+    use local var #f(or whatever). 
+    #f will give access to html element. to access to the form object (js), assign "ngForm" to this var.
+    this will give js object that is created by ng instead of html elm
+  
+    name attribute and its value (mycontent) will be used for forms>controls and value
+    required is a html attribute, but ng will recognize and understand it with using "ngNativeValidate"
+    ng-pristine ... empty
+    ng-invalid 
+    ng-touched ... clicked
+  -->
+    <form ngNativeValidate (ngSubmit)="onSubmit()">                
+      <div class="form-group">
+        <label for="theme_name">Theme Name</label>
+        <input 
+          type="text" 
+          id="theme_name" 
+          class="form-control" 
+          [(ngModel)]="theme_name" 
+          name="theme_name"
+          required
+          >
+      </div>
+      <div class="form-group">
+        <label for="main_color">Main Color</label>
+        <input id="main_color"
+        name="main_color"
+        [(colorPicker)]="main_color"
+        [style.background]="main_color"
+        ngModel/>
+      </div>
+      <div class="form-group">
+        <label for="accent_color1">Accent Color 1</label>
+        <input id="accent_color1"
+        name="accent_color1"
+        [(colorPicker)]="accent_color1"
+        [style.background]="accent_color1"
+        ngModel/>
+      </div>
+      <div class="form-group">
+        <label for="accent_color2">Accent Color 2</label>
+        <input id="accent_color2"
+        name="accent_color2"
+        [(colorPicker)]="accent_color2"
+        [style.background]="accent_color2"
+        ngModel/>
+      </div>
+      <button class="btn btn-default" type="submit">Save</button>
+    </form>
+  </div>
+  

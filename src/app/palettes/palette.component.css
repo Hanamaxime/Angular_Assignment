@@ -1,0 +1,27 @@
+.palette{
+    position: relative;
+}
+
+.box-left{
+    width: 20px;
+    height: 40px;
+    border: 1px solid #222;
+    border-right: none;
+}
+.box-top{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 20px;
+    top: 0;
+    border: 1px solid #222;
+    border-bottom: none;
+}
+.box-bottom{
+    width:20px;
+    height: 20px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    border: 1px solid #222;
+}
