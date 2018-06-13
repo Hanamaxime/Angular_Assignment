@@ -1,0 +1,12 @@
+.section {
+  margin-top: 50px;
+}
+
+.background {
+  background-color: pink;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}

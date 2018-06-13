@@ -28,7 +28,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     HeaderComponent,
     PalettesComponent,
     PaletteComponent,
-    AddPaletteComponent
+    AddPaletteComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
