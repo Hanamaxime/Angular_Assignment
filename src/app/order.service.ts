@@ -9,11 +9,23 @@ import { Observable, of } from 'rxjs';
 
 export class OrderService {
 
-    order:orders[] = [
-      {id: 1, typeBrush1: 'roller', typeBrush2: 'flat'},
-      {id: 2, typeBrush1: 'flat', typeBrush2: 'roller'},
+
+// will display previous orders
+    orders:Order[] = [
+      {sizeBrush: "Paint-Brush-Large", numBrush: 5, typeBrush: ["wood", "plastic"], subNews: true },
+      {sizeBrush: "Paint-Brush-Extra-Small", numBrush: 2, typeBrush: ["wood", "plastic"], subNews: false },
       ];
 
 
   constructor() {}
+
+  getOrders():Observable<Order[]>{
+    return of(this.orders);
+  }
+
+  addOrder(o:Order){
+    this.orders.push(o);
+  }
+
+
 }

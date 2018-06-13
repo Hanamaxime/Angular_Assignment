@@ -3,10 +3,12 @@
 
 <h1>Place an Order</h1>
 
+<form (ngSubmit)="onSubmit()">
+
 <!-- string -->
 <div class="section">
 <div>Chose Brush Size:</div>
-<select>
+<select [(ngModel)]="brush_size" name="brush_size">
   <option value="Paint-Brush-Large">Large Paint Brush</option>
   <option value="Paint-Brush-Medium">Medium Paint Brush</option>
   <option value="Paint-Brush-Small">Small Paint Brush</option>
@@ -17,30 +19,43 @@
 <!-- string -->
 <div class="section">
 <div>Number of Brushes:</div>
-<input type="text" name="number" value="">
+<input type="text" name="num_brush" value="" [(ngModel)]="num_brush">
 </div>
 
 
-<!-- array -->
 <div class="section">
-<div>Chose Brush Type:</div>
-<div *ngIf="order">
-  <div *ngFor="let o of order">
-    {{o.typeBrush1}} {{o.typeBrush2}}
-  </div>
+<div>Type of Brush:</div>
+<input type="checkbox" name="brush_type1" value="wood" [(ngModel)]="brush_type1">Wood<br>
+<input type="checkbox" name="brush_type2" value="plastic" [(ngModel)]="brush_type2">Plastic<br>
 </div>
-</div>
+
 
 
 <!-- boolean -->
 <div class="section">
 <div>Subscribe to the news letter?</div>
-<form action="">
-  <input type="radio" name="yes" value="yes"> Yes<br>
+
+  <input type="radio" name="news_letter" value="yes" [(ngModel)]="news_letter"> Yes<br>
   <div class="section">
-    <input type="submit" value="Submit">
+    <button type="submit" class="btn">SUBMIT</button>
   </div>
+
+</div>
+
 </form>
-</div>
+
 <br>
-</div>
+
+<div>
+  <div>Previous shoppers have purchased:</div>
+<ul>
+  <!-- loop through element -->
+  <li *ngFor="let o of orders">
+    {{o.sizeBrush}}
+    {{o.typeBrush}}
+  </li>
+</ul>
+  </div>
+
+  <br>
+  </div>

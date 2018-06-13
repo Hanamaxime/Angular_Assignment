@@ -1,6 +1,11 @@
 export class Order {
 
-      id: number;
-      typeBrush1:string;
-      typeBrush2:string;
+constructor (
+      // public id: number;
+      public sizeBrush: string;
+      public numBrush: number;
+      public typeBrush: string[];
+      public subNews: boolean;
+    ){}
+
 }
