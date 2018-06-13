@@ -10,4 +10,3 @@ export class Palette{
         public isFav:boolean = false,
     ){}
 }
-

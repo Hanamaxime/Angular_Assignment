@@ -2,6 +2,8 @@
 
 
 <h1>Place an Order</h1>
+
+<!-- string -->
 <div>Chose Brush Size:</div>
 <select>
   <option value="Paint-Brush-Large">Large Paint Brush</option>
@@ -11,15 +13,19 @@
 </select>
 
 
+<div *ngIf="brushes">
+  <div *ngFor="let b of brushes">
+    {{b.typeBrush1}} {{b.typeBrush2}}
+  </div>
+</div>
 
 
-{{ palette.id }}
 
-
-<span *ngIf="palette.isFav==true">&#9733;</span>
-<h2 class="h5">{{palette.paletteName}}</h2>
-<div class="palette">
-  <div class="box-left" [ngStyle]="{backgroundColor:palette.colors[0]}"></div>
-  <div class="box-top" [ngStyle]="{backgroundColor:palette.colors[1]}"></div>
-  <div class="box-bottom" [ngStyle]="{backgroundColor:palette.colors[2]}"></div>
+<!-- boolean -->
+<div class="subscribe">
+<div>Subscribe to the news letter?</div>
+<form action="">
+  <input type="radio" name="yes" value="yes"> Yes<br>
+    <input type="submit" value="Submit">
+</form>
 </div>
